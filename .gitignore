@@ -1,0 +1,56 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+# Project exclude paths
+/.gradle/
+/buildSrc/.gradle/
+/spring-aop/out/
+/spring-aop/out/production/classes/
+/spring-aop/out/test/classes/
+/spring-beans/out/
+/spring-beans/out/production/classes/
+/spring-beans/out/test/classes/
+/spring-context/out/
+/spring-context/out/production/classes/
+/spring-context/out/test/classes/
+/spring-core/out/
+/spring-core/out/production/classes/
+/spring-core/out/test/classes/
+/spring-expression/out/
+/spring-expression/out/production/classes/
+/spring-expression/out/test/classes/
+/spring-instrument/out/
+/spring-instrument/out/production/classes/
+/spring-jcl/out/
+/spring-jcl/out/production/classes/
+/spring-test-demo/out/
+/spring-test-demo/out/production/classes/

@@ -1,0 +1,27 @@
+1、getBean->doGetBean->getSingleton(beanName)
+   一二三级缓存中获取，如果在第三级中获取到了，
+   则从三级(singletonFactories)中移除  加入二级(earlySingletonObjects)中
+
+2、createBean-> doCreateBean->addSingletonFactory(beanName, singletonFactory):此时已经成功创建
+   如果一级缓存中不存在!this.singletonObjects.containsKey(beanName)
+   就把它加入三级缓存，从二级缓存中移除
+
+3、doGetBean->getSingleton(String beanName, ObjectFactory<?> singletonFactory)
+   ->addSingleton(beanName, singletonObject)
+   存入一级缓存singletonObjects.put(beanName, singletonObject)
+   从二三级缓存中移除
+   this.singletonFactories.remove(beanName);
+   this.earlySingletonObjects.remove(beanName);
+
+
+2三级 put      singletonFactories  put a
+2二级 remove   earlySingletonObjects  remove a
+
+2三级 put      singletonFactories  put a
+2二级 remove   earlySingletonObjects  remove a
+
+//
+
+
+
+
